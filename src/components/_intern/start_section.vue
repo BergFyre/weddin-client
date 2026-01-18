@@ -142,7 +142,7 @@
 </style>
 <script>
 import sal from "sal.js";
-import countdown from "components/_intern/countDown";
+import countdown from "components/_intern/countdown";
 import { defineComponent } from "vue";
 import { debounce, colors } from "quasar";
 import { mapState, mapGetters } from "vuex";
