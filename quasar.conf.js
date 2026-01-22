@@ -44,7 +44,14 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: "hash", // available values: 'hash', 'history'
 
-      env: require("dotenv").config().parsed,
+      env: {
+        ...(require("dotenv").config().parsed || {}),
+
+        API: process.env.API,
+        mediaHost: process.env.mediaHost,
+        adminPanel: process.env.adminPanel,
+        VUE_APP_WS_URL: process.env.VUE_APP_WS_URL,
+      },
 
       // transpile: false
       // publicPath: '/',
